@@ -1,1 +1,9 @@
-{}
+{
+    "tool-id": "test",
+    "details": {
+        "name": "test",
+        "description": "this is a very cool test",
+        "jsCode": "console.log('it works!');"
+    }
+}
+
