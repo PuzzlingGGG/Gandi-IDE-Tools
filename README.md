@@ -1,6 +1,6 @@
 # Gandi-IDE-Tools
 
-Gandi-IDE-Tools is a Chrome extension designed to enhance the Gandi IDE experience by providing a collection of developer tools. With Gandi-IDE-Tools, you can easily enable or disable individual tools, execute them on-demand, and even run all enabled tools with a single click.
+Gandi-IDE-Tools is a Chrome extension designed to enhance the Gandi IDE experience by providing a collection of helpful tools. With Gandi-IDE-Tools, you can easily enable or disable individual tools, execute them on-demand, and even run all enabled tools with a single click.
 
 ## Features
 
@@ -23,8 +23,6 @@ Gandi-IDE-Tools is a Chrome extension designed to enhance the Gandi IDE experien
 2. In the popup, you'll see a list of available tools. Toggle the switch next to a tool to enable or disable it.
 3. Click on "Run Tool" next to a tool to execute it on-demand.
 4. Click on "Run All Enabled Tools" to execute all enabled tools at once.
-
-Certainly! Here's an updated "Contributing" section that includes instructions on how to add a new tool to the Gandi-IDE-Tools extension:
 
 ## Contributing
 
@@ -58,7 +56,7 @@ We welcome contributions! If you have a tool you'd like to add, or an improvemen
    - Fork the Gandi-IDE-Tools repository, add your tool to the `tools.json` file in your fork, and submit a pull request.
    - In your pull request description, explain what your tool does and how to use it.
 
-Your contributions help make Gandi-IDE-Tools better, and we appreciate your support!
+Your contributions help make Gandi-IDE-Tools better, and I appreciate your support!
 
 ## License
 
