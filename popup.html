@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gandi IDE Tools</title>
+<style>
+  body {
+    width: 300px;
+    font-family: Arial, sans-serif;
+    background-color: #2e3644;
+    color: #ffffff;
+  }
+  #tools-container {
+    margin: 10px 0;
+  }
+  .tool {
+    margin-bottom: 10px;
+  }
+  .tool-header {
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: #2e3644; /* Adjusted text color for visibility */
+  }
+  .tool-content {
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #2e3644; /* Adjusted text color for visibility */
+  }
+  button {
+    background-color: #39c66c;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+</style>
+<script src="popup.js" defer></script>
+</head>
+<body>
+<div id="tools-container">
+  <!-- Tools will be dynamically populated here by popup.js -->
+</div>
+</body>
+</html>
