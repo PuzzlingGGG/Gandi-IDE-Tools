@@ -3,29 +3,28 @@ chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.sync.set({ tools: {} });
 });
 
+function runToolsOnTab(tools, tabId) {
+    for (const toolId in tools) {
+        if (tools[toolId].enabled) {
+            const code = tools[toolId].jsCode;
+            chrome.tabs.executeScript(tabId, { code });
+        }
+    }
+}
+
 chrome.webNavigation.onCompleted.addListener(details => {
     // Get the tool configurations
     chrome.storage.sync.get('tools', data => {
         const tools = data.tools;
-        // Iterate through the tools and apply the enabled ones
-        for (const toolId in tools) {
-            if (tools[toolId].enabled) {
-                const code = tools[toolId].jsCode;
-                chrome.tabs.executeScript(details.tabId, { code });
-            }
-        }
+        runToolsOnTab(tools, details.tabId);
     });
 });
 
-// Listen for messages from the popup to update the tool configurations
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === 'runEnabledTools') {
         chrome.tabs.query({ active: true, currentWindow: true }, tabs => {
             const tabId = tabs[0].id;
-            for (const toolId in message.tools) {
-                const code = message.tools[toolId].jsCode;
-                chrome.tabs.executeScript(tabId, { code });
-            }
+            runToolsOnTab(message.tools, tabId);
         });
     }
     if (message.action === 'updateTools') {
