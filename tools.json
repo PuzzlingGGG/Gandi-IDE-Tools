@@ -3,15 +3,7 @@
         "details": {
             "name": "Test Tool",
             "description": "Adds a new tab next to the 'Sounds' tab on the Gandi IDE page.",
-            "jsCode": "
-                const soundsTab = Array.from(document.querySelectorAll('.gandi_editor-wrapper_tab_2OPuA')).find(tab => tab.innerText === 'Sounds');
-                if (soundsTab) {
-                    const newTab = document.createElement('li');
-                    newTab.className = 'gandi_editor-wrapper_tab_2OPuA';
-                    newTab.innerText = 'It works!!!!!';
-                    soundsTab.parentNode.insertBefore(newTab, soundsTab.nextSibling);
-                }
-            "
+            "jsCode": "const soundsTab = Array.from(document.querySelectorAll('.gandi_editor-wrapper_tab_2OPuA')).find(tab => tab.innerText === 'Sounds'); if (soundsTab) { const newTab = document.createElement('li'); newTab.className = 'gandi_editor-wrapper_tab_2OPuA'; newTab.innerText = 'It works!!!!!'; soundsTab.parentNode.insertBefore(newTab, soundsTab.nextSibling); }"
         }
     }
 }
