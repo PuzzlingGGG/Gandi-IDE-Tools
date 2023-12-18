@@ -1,1 +1,10 @@
-
+{
+    "test-tool": {
+        "details": {
+            "name": "Test Tool",
+            "description": "Only meant for testing. There is no reason for this to be used.",
+            "jsCode": "const soundsTab = Array.from(document.querySelectorAll('.gandi_editor-wrapper_tab_2OPuA')).find(tab => tab.innerText === 'Sounds'); if (soundsTab) { const newTab = document.createElement('li'); newTab.className = 'gandi_editor-wrapper_tab_2OPuA'; newTab.innerText = 'If this is visible, good! it works!'; soundsTab.parentNode.insertBefore(newTab, soundsTab.nextSibling); }",
+            "credit": "(PuzzlingGGG)[https://scratch.mit.edu/users/puzzlingGGG/]"
+        }
+    }
+}
